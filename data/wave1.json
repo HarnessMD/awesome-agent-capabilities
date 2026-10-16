@@ -1,0 +1,5322 @@
+{
+  "entries": [
+    {
+      "id": "sequential-thinking",
+      "name": "Sequential Thinking",
+      "kind": "mcp-server",
+      "purposes": [
+        "reasoning"
+      ],
+      "maker": "Model Context Protocol project",
+      "tier": "first-party",
+      "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/sequentialthinking",
+      "what": "One tool that lets an agent write down and revise its reasoning step by step. It touches nothing outside itself.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex"
+      ],
+      "licence": "MIT (repository: Apache-2.0 for new contributions, MIT for older code)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": false,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.0.0",
+        "lastReleaseAt": "2026-10-11T02:40:29Z",
+        "lastPushAt": "2026-10-13T05:54:47Z"
+      },
+      "pinned": "v1.0.0 (npm @modelcontextprotocol/server-sequential-thinking@1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "sequential-thinking",
+        "manual": [
+          "In the app it is on by default for every agent on Claude Code.",
+          "Needs Node, for npx.",
+          "By hand in Claude Code: claude mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking",
+          "By hand in Codex: codex mcp add sequential-thinking -- npx -y @modelcontextprotocol/server-sequential-thinking"
+        ]
+      }
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "kind": "mcp-server",
+      "purposes": [
+        "utilities"
+      ],
+      "maker": "Model Context Protocol project",
+      "tier": "first-party",
+      "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/time",
+      "what": "Gives the current time in a time zone and converts a time between time zones.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT (repository: Apache-2.0 for new contributions, MIT for older code)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.0.0",
+        "lastReleaseAt": "2026-10-11T02:40:29Z",
+        "lastPushAt": "2026-10-13T05:54:47Z"
+      },
+      "pinned": "v1.0.0 (PyPI mcp-server-time 2026.10.10)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "time",
+        "manual": [
+          "In the app it is on by default for every agent on Claude Code.",
+          "Needs uv, for uvx.",
+          "By hand in Claude Code: claude mcp add time -- uvx mcp-server-time",
+          "By hand in Codex: codex mcp add time -- uvx mcp-server-time"
+        ]
+      }
+    },
+    {
+      "id": "fetch",
+      "name": "Fetch",
+      "kind": "mcp-server",
+      "purposes": [
+        "browsers"
+      ],
+      "maker": "Model Context Protocol project",
+      "tier": "first-party",
+      "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+      "what": "Fetches a web address and returns the page as markdown. One tool. Its maker warns that it can reach local and internal addresses.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT (repository: Apache-2.0 for new contributions, MIT for older code)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.0.0",
+        "lastReleaseAt": "2026-10-11T02:40:29Z",
+        "lastPushAt": "2026-10-13T05:54:47Z"
+      },
+      "pinned": "v1.0.0 (PyPI mcp-server-fetch 2026.10.10)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "fetch",
+        "manual": [
+          "In the app it is on by default for every agent on Claude Code.",
+          "Needs uv, for uvx.",
+          "By hand in Claude Code: claude mcp add fetch -- uvx mcp-server-fetch",
+          "By hand in Codex: codex mcp add fetch -- uvx mcp-server-fetch",
+          "It obeys robots.txt for requests a model makes unless started with --ignore-robots-txt"
+        ]
+      }
+    },
+    {
+      "id": "filesystem",
+      "name": "Filesystem",
+      "kind": "mcp-server",
+      "purposes": [
+        "files"
+      ],
+      "maker": "Model Context Protocol project",
+      "tier": "first-party",
+      "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "what": "Reads, writes, edits, moves and searches files inside the folders it is allowed. Under Claude Code those are the launch folder and every additional working directory, whatever folder the command names.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT (repository: Apache-2.0 for new contributions, MIT for older code)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.0.0",
+        "lastReleaseAt": "2026-10-11T02:40:29Z",
+        "lastPushAt": "2026-10-13T05:54:47Z"
+      },
+      "pinned": "v1.0.0 (npm @modelcontextprotocol/server-filesystem@1.0.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Its maker marks write_file, edit_file and move_file as destructive: they overwrite or remove what was there.",
+      "install": {
+        "door": "mcp-local",
+        "ref": "filesystem",
+        "manual": [
+          "In the app it is off until you switch it on. It was on by default before 0.5.6.",
+          "Needs Node, for npx.",
+          "By hand in Claude Code: claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path/to/allowed/folder",
+          "By hand in Codex: codex mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem /path/to/allowed/folder",
+          "A client that supports roots replaces the folders on the command line with its own. Claude Code sends the launch folder and every added working directory."
+        ]
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "kind": "mcp-server",
+      "purposes": [
+        "source-control"
+      ],
+      "maker": "Model Context Protocol project",
+      "tier": "first-party",
+      "source": "https://github.com/modelcontextprotocol/servers/tree/main/src/git",
+      "what": "Reads status, diffs, history and branches of a local Git repository, and can stage, commit, reset the index, create a branch and check one out. Twelve tools, no push. It works on the whole repository that holds the folder it is given.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT (repository: Apache-2.0 for new contributions, MIT for older code)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.0.0",
+        "lastReleaseAt": "2026-10-11T02:40:29Z",
+        "lastPushAt": "2026-10-13T05:54:47Z"
+      },
+      "pinned": "v1.0.0 (PyPI mcp-server-git 2026.10.10)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "git",
+        "manual": [
+          "In the app it is off until you switch it on. It was on by default before 0.5.6.",
+          "Needs uv, for uvx.",
+          "By hand in Claude Code: claude mcp add git -- uvx mcp-server-git --repository path/to/git/repo",
+          "By hand in Codex: codex mcp add git -- uvx mcp-server-git --repository path/to/git/repo",
+          "The server walks up from that path to the top of the repository and allows calls anywhere inside it."
+        ]
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub MCP Server",
+      "kind": "mcp-server",
+      "purposes": [
+        "source-control",
+        "code-review",
+        "planning"
+      ],
+      "maker": "GitHub",
+      "tier": "vendor",
+      "source": "https://github.com/github/github-mcp-server",
+      "what": "GitHub's own server: repositories, issues, pull requests, Actions, code security, gists and notifications. Its tools include delete_file and delete_repository. A read only switch and tool groups narrow it.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini",
+        "antigravity",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "key",
+        "secretNames": [
+          "GITHUB_PERSONAL_ACCESS_TOKEN"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.0.2",
+        "lastReleaseAt": "2026-10-08T11:33:15Z",
+        "lastPushAt": "2026-10-13T14:59:15Z"
+      },
+      "pinned": "v2.0.2 (ghcr.io/github/github-mcp-server:v2.0.2)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "github",
+        "manual": [
+          "Needs Docker, installed and running.",
+          "Make a GitHub personal access token with only the permissions you want an agent to have, and set it as GITHUB_PERSONAL_ACCESS_TOKEN.",
+          "By hand in Claude Code: claude mcp add github -e GITHUB_PERSONAL_ACCESS_TOKEN=$GITHUB_PAT -- docker run -i --rm -e GITHUB_PERSONAL_ACCESS_TOKEN ghcr.io/github/github-mcp-server",
+          "Read only: add -e GITHUB_READ_ONLY=1 to the docker line.",
+          "GitHub also hosts the server at https://api.githubcopilot.com/mcp/ with the token sent as a header. Its install guides give the line for each client.",
+          "Codex, hosted: codex mcp add github --url https://api.githubcopilot.com/mcp/ --bearer-token-env-var GITHUB_PAT_TOKEN"
+        ]
+      }
+    },
+    {
+      "id": "context7",
+      "name": "Context7",
+      "kind": "mcp-server",
+      "purposes": [
+        "docs",
+        "devtools"
+      ],
+      "maker": "Upstash",
+      "tier": "vendor",
+      "source": "https://github.com/upstash/context7",
+      "what": "Looks up current documentation and code examples for a library, so an agent does not answer from memory. Two tools: find the library, then query its docs.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "@upstash/context7-mcp@4.4.1",
+        "lastReleaseAt": "2026-10-13T14:09:17Z",
+        "lastPushAt": "2026-10-13T17:12:21Z"
+      },
+      "pinned": "@upstash/context7-mcp@4.4.1 (registry io.github.upstash/context7 4.4.1)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "context7",
+        "manual": [
+          "In the app it is on by default for every agent on Claude Code, as the local package.",
+          "Needs Node, for npx.",
+          "By hand in Claude Code: claude mcp add --scope user context7 -- npx -y @upstash/context7-mcp",
+          "By hand in Codex: codex mcp add context7 -- npx -y @upstash/context7-mcp",
+          "A free API key from context7.com/dashboard raises the rate limits. Pass it with --api-key.",
+          "The maker also hosts it at https://mcp.context7.com/mcp and now points new setups there. Its own setup command is npx ctx7 setup"
+        ]
+      }
+    },
+    {
+      "id": "mcp-toolbox-databases",
+      "name": "MCP Toolbox for Databases",
+      "kind": "mcp-server",
+      "purposes": [
+        "databases"
+      ],
+      "maker": "Google",
+      "tier": "vendor",
+      "source": "https://github.com/googleapis/mcp-toolbox",
+      "what": "Google's database server with ready made tool sets for many engines. The app starts the PostgreSQL set: one tool runs any SQL, the rest list tables, views, indexes, locks, settings and statistics.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "antigravity"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "key",
+        "secretNames": [
+          "POSTGRES_DATABASE",
+          "POSTGRES_USER",
+          "POSTGRES_PASSWORD",
+          "POSTGRES_HOST",
+          "POSTGRES_PORT"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.14.0",
+        "lastReleaseAt": "2026-10-08T18:48:43Z",
+        "lastPushAt": "2026-10-14T01:59:20Z"
+      },
+      "pinned": "v1.14.0 (npm @toolbox-sdk/server@1.14.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "mcp-toolbox-databases",
+        "manual": [
+          "Needs Node, for npx, and a PostgreSQL database you can reach.",
+          "Set POSTGRES_DATABASE, POSTGRES_USER and POSTGRES_PASSWORD. POSTGRES_HOST defaults to localhost and POSTGRES_PORT to 5432.",
+          "By hand: add a server to your client with the command npx and the arguments -y @toolbox-sdk/server --prebuilt=postgres --stdio",
+          "In Claude Code that is: claude mcp add toolbox-postgres -- npx -y @toolbox-sdk/server --prebuilt=postgres --stdio",
+          "For another database swap postgres for its name. The README lists them.",
+          "Give the database user only the rights you want an agent to have: one tool runs any SQL."
+        ]
+      }
+    },
+    {
+      "id": "dbhub",
+      "name": "DBHub",
+      "kind": "mcp-server",
+      "purposes": [
+        "databases"
+      ],
+      "maker": "Bytebase",
+      "tier": "vendor",
+      "source": "https://github.com/bytebase/dbhub",
+      "what": "A small database server for PostgreSQL, MySQL, MariaDB, SQL Server, Oracle and SQLite. Two tools by default: run SQL and search the schema. It has a read only mode, row limits and a query timeout.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "key",
+        "secretNames": [
+          "DSN"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.5.0",
+        "lastReleaseAt": "2026-10-09T09:30:12Z",
+        "lastPushAt": "2026-10-13T15:23:25Z"
+      },
+      "pinned": "v1.5.0 (npm @bytebase/dbhub@1.5.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "dbhub",
+        "manual": [
+          "Needs Node 22.5 or later.",
+          "Set DSN to the connection string of the one database it should reach. The format is on the DBHub command line page.",
+          "By hand in Claude Code: claude mcp add --scope user dbhub -- npx @bytebase/dbhub@latest --transport stdio",
+          "DBHub reads the connection string from the --dsn flag first, then from DSN.",
+          "Give the database user only the rights you want an agent to have: execute_sql runs any SQL."
+        ]
+      }
+    },
+    {
+      "id": "google-gmail",
+      "name": "Gmail MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "communication"
+      ],
+      "maker": "Google",
+      "tier": "vendor",
+      "source": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "what": "Google's hosted Gmail server: searches and reads threads, creates drafts and adds or removes labels. Google lists ten tools and no send tool. Part of the Google Workspace Developer Preview Program.",
+      "wave": 1,
+      "worksWith": [
+        "antigravity"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Join the Google Workspace Developer Preview Program and have a Google Cloud project.",
+          "In that project turn on the product API and its MCP API (gmailmcp.googleapis.com).",
+          "Set up the OAuth consent screen with the scopes Google lists for the product.",
+          "Create an OAuth client of type Web application, tick \"Use this client for an AI-powered agent\", and keep its client ID and client secret.",
+          "Server address: https://gmailmcp.googleapis.com/mcp/v1 over streamable HTTP. Sign in is OAuth with your own client.",
+          "Antigravity: add the server with that address, client ID and client secret to ~/.gemini/config/mcp_config.json, then authenticate it from the /mcp panel.",
+          "Claude.ai and Claude Desktop: Settings, Connectors, Add custom connector. The redirect address on your OAuth client is https://claude.ai/api/mcp/auth_callback",
+          "Google's page gives no command for Claude Code or Codex, so there is no install button."
+        ]
+      }
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "calendar"
+      ],
+      "maker": "Google",
+      "tier": "vendor",
+      "source": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "what": "Google's hosted Calendar server: lists calendars and events, creates, updates and deletes events, answers invitations and suggests meeting times. Nine tools. Part of the Google Workspace Developer Preview Program.",
+      "wave": 1,
+      "worksWith": [
+        "antigravity"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Join the Google Workspace Developer Preview Program and have a Google Cloud project.",
+          "In that project turn on the product API and its MCP API (calendarmcp.googleapis.com).",
+          "Set up the OAuth consent screen with the scopes Google lists for the product.",
+          "Create an OAuth client of type Web application, tick \"Use this client for an AI-powered agent\", and keep its client ID and client secret.",
+          "Server address: https://calendarmcp.googleapis.com/mcp/v1 over streamable HTTP. Sign in is OAuth with your own client.",
+          "Antigravity: add the server with that address, client ID and client secret to ~/.gemini/config/mcp_config.json, then authenticate it from the /mcp panel.",
+          "Claude.ai and Claude Desktop: Settings, Connectors, Add custom connector. The redirect address on your OAuth client is https://claude.ai/api/mcp/auth_callback",
+          "Google's page gives no command for Claude Code or Codex, so there is no install button."
+        ]
+      }
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "files",
+        "documents"
+      ],
+      "maker": "Google",
+      "tier": "vendor",
+      "source": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "what": "Google's hosted Drive server: searches, reads and downloads files, reads file details and permissions, and creates or copies files. Google lists eight tools and no delete tool. Part of the Google Workspace Developer Preview Program.",
+      "wave": 1,
+      "worksWith": [
+        "antigravity"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Join the Google Workspace Developer Preview Program and have a Google Cloud project.",
+          "In that project turn on the product API and its MCP API (drivemcp.googleapis.com).",
+          "Set up the OAuth consent screen with the scopes Google lists for the product.",
+          "Create an OAuth client of type Web application, tick \"Use this client for an AI-powered agent\", and keep its client ID and client secret.",
+          "Server address: https://drivemcp.googleapis.com/mcp/v1 over streamable HTTP. Sign in is OAuth with your own client.",
+          "Antigravity: add the server with that address, client ID and client secret to ~/.gemini/config/mcp_config.json, then authenticate it from the /mcp panel.",
+          "Claude.ai and Claude Desktop: Settings, Connectors, Add custom connector. The redirect address on your OAuth client is https://claude.ai/api/mcp/auth_callback",
+          "Google's page gives no command for Claude Code or Codex, so there is no install button."
+        ]
+      }
+    },
+    {
+      "id": "exa",
+      "name": "Exa",
+      "kind": "mcp-server",
+      "purposes": [
+        "search",
+        "research"
+      ],
+      "maker": "Exa",
+      "tier": "vendor",
+      "source": "https://github.com/exa-labs/exa-mcp-server",
+      "what": "Web search and page reading, hosted by Exa. Two tools by default, with an advanced search tool and an agent run tool that can be switched on.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-07T22:45:09Z"
+      },
+      "pinned": "registry ai.exa/exa 3.4.1 (repository head e9c3b0126a3373eb1aeaca162e84d0791ff4c7f7)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "exa",
+              "--scope",
+              "user",
+              "https://mcp.exa.ai/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http exa --scope user https://mcp.exa.ai/mcp",
+          "Or the maker's plugin, which adds two skills as well: claude plugin install exa@claude-plugins-official",
+          "Codex: codex mcp add exa --url https://mcp.exa.ai/mcp",
+          "It works with no sign in, at lower limits. Signing in to Exa, or an Exa API key, lifts them and unlocks Exa Agent."
+        ]
+      }
+    },
+    {
+      "id": "brave-search",
+      "name": "Brave Search",
+      "kind": "mcp-server",
+      "purposes": [
+        "search"
+      ],
+      "maker": "Brave",
+      "tier": "vendor",
+      "source": "https://github.com/brave/brave-search-mcp-server",
+      "what": "Web, local, place, image, video and news search plus a summariser, through the Brave Search API. Every tool is a search.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "key",
+        "secretNames": [
+          "BRAVE_API_KEY"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.1.4",
+        "lastReleaseAt": "2026-09-17T14:47:14Z",
+        "lastPushAt": "2026-10-13T19:42:44Z"
+      },
+      "pinned": "v2.1.4 (npm @brave/brave-search-mcp-server@2.1.4)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "brave-search",
+        "manual": [
+          "Needs Node, for npx.",
+          "Get a Brave Search API key and set it as BRAVE_API_KEY.",
+          "By hand: add a server to your client with the command npx and the arguments -y @brave/brave-search-mcp-server --transport stdio",
+          "In Claude Code that is: claude mcp add brave-search -- npx -y @brave/brave-search-mcp-server --transport stdio"
+        ]
+      }
+    },
+    {
+      "id": "firecrawl",
+      "name": "Firecrawl",
+      "kind": "mcp-server",
+      "purposes": [
+        "browsers",
+        "search"
+      ],
+      "maker": "Firecrawl",
+      "tier": "vendor",
+      "source": "https://github.com/firecrawl/firecrawl-mcp-server",
+      "what": "Scrapes, crawls, maps and searches the web, drives pages by clicking and typing, and runs scheduled page monitors that can alert by webhook or email. Calls draw Firecrawl credits.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "key",
+        "secretNames": [
+          "FIRECRAWL_API_KEY"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "firecrawl-mcp 3.30.0 (npm)",
+        "lastReleaseAt": "2026-10-13T23:00:04Z",
+        "lastPushAt": "2026-10-13T23:19:39Z"
+      },
+      "pinned": "firecrawl-mcp@3.30.0 (npm; registry io.github.firecrawl/firecrawl-mcp-server 3.30.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "mcp-local",
+        "ref": "firecrawl",
+        "manual": [
+          "Needs Node 22 or later.",
+          "Get a Firecrawl API key and set it as FIRECRAWL_API_KEY. Never put the key in a server address or in a chat.",
+          "By hand: add a server to your client with the command npx and the arguments -y firecrawl-mcp",
+          "In Claude Code that is: claude mcp add firecrawl -- npx -y firecrawl-mcp",
+          "Firecrawl also hosts it at https://mcp.firecrawl.dev/v2/mcp with the key sent as a bearer header."
+        ]
+      }
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "browsers",
+        "testing"
+      ],
+      "maker": "Microsoft",
+      "tier": "vendor",
+      "source": "https://github.com/microsoft/playwright-mcp",
+      "what": "Drives a real browser: opens pages, clicks, types, fills forms, uploads files, runs page scripts, takes screenshots and saves PDFs. It can clear cookies and stored site data.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini",
+        "opencode"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v0.0.83",
+        "lastReleaseAt": "2026-09-28T23:17:11Z",
+        "lastPushAt": "2026-10-08T17:51:59Z"
+      },
+      "pinned": "v0.0.83 (npm @playwright/mcp@0.0.83)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "It acts as whoever is signed in on any site the browser opens. The yes and no answers do not show that.",
+      "install": {
+        "door": "mcp-local",
+        "ref": "playwright",
+        "manual": [
+          "Needs Node, for npx.",
+          "By hand in Claude Code: claude mcp add playwright npx @playwright/mcp@latest",
+          "By hand in Codex: codex mcp add playwright npx \"@playwright/mcp@latest\""
+        ]
+      }
+    },
+    {
+      "id": "chrome-devtools",
+      "name": "Chrome DevTools MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "browsers",
+        "testing",
+        "frontend"
+      ],
+      "maker": "Google (Chrome DevTools team)",
+      "tier": "vendor",
+      "source": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "what": "Controls and inspects a live Chrome: input, navigation, network and console, performance traces, Lighthouse audits, heap snapshots, and installing or removing extensions.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini",
+        "antigravity",
+        "opencode"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "chrome-devtools-mcp-v1.10.1",
+        "lastReleaseAt": "2026-09-23T10:37:16Z",
+        "lastPushAt": "2026-10-13T17:40:04Z"
+      },
+      "pinned": "chrome-devtools-mcp-v1.10.1 (npm chrome-devtools-mcp@1.10.1)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "It acts as whoever is signed in on any site the browser opens. The yes and no answers do not show that.",
+      "install": {
+        "door": "mcp-local",
+        "ref": "chrome-devtools",
+        "manual": [
+          "Needs a current Node and a current Chrome.",
+          "By hand: add a server to your client with the command npx and the arguments -y chrome-devtools-mcp@latest",
+          "In Claude Code that is: claude mcp add chrome-devtools -- npx -y chrome-devtools-mcp@latest",
+          "Google collects usage statistics unless the server is started with --no-usage-statistics. The app starts it with that flag."
+        ]
+      }
+    },
+    {
+      "id": "serena",
+      "name": "Serena",
+      "kind": "mcp-server",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Oraios AI",
+      "tier": "vendor",
+      "source": "https://github.com/oraios/serena",
+      "what": "Finds and edits code by symbol through language servers, with refactoring that includes safe delete, a file search and replace, project memory, and a tool that runs shell commands.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini",
+        "opencode"
+      ],
+      "licence": "GPL-3.0-or-later (Serena application); MIT (SolidLSP component)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.0.0",
+        "lastReleaseAt": "2026-10-13T12:25:45Z",
+        "lastPushAt": "2026-10-13T12:25:22Z"
+      },
+      "pinned": "v2.0.0 (PyPI serena-agent 2.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "The maker says not to install Serena through an MCP or plugin marketplace, so there is no install button. Follow its own quick start.",
+          "Install uv first.",
+          "uv tool install -p 3.13 serena-agent",
+          "serena init",
+          "Claude Code: claude mcp add --scope user serena -- serena start-mcp-server --context claude-code --project-from-cwd",
+          "Codex: add [mcp_servers.serena] to ~/.codex/config.toml with command = \"serena\" and args = [\"start-mcp-server\", \"--project-from-cwd\", \"--context=codex\"]"
+        ]
+      }
+    },
+    {
+      "id": "sentry",
+      "name": "Sentry MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "observability"
+      ],
+      "maker": "Sentry",
+      "tier": "vendor",
+      "source": "https://github.com/getsentry/toolkit",
+      "what": "Searches errors, traces and logs, reads issues, events, releases and docs, and creates or deletes projects, teams, keys, alert rules and monitors. Hosted by Sentry.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "FSL-1.1-Apache-2.0",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "@sentry/mcp-server 0.42.0 (npm)",
+        "lastReleaseAt": "2026-09-25T14:49:02Z",
+        "lastPushAt": "2026-10-13T23:54:42Z"
+      },
+      "pinned": "registry io.github.getsentry/sentry-mcp 0.42.0 (npm @sentry/mcp-server@0.42.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "sentry",
+              "--scope",
+              "user",
+              "https://mcp.sentry.dev/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http sentry --scope user https://mcp.sentry.dev/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login sentry in a terminal. A browser opens.",
+          "Or the maker's plugin: claude plugin marketplace add getsentry/sentry-mcp, then claude plugin install sentry-mcp@sentry-mcp",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.sentry] with url = \"https://mcp.sentry.dev/mcp\" to ~/.codex/config.toml, then run codex mcp login sentry",
+          "Self hosted Sentry: the maker has a local mode, npx @sentry/mcp-server@latest with an access token, and calls it a work in progress."
+        ]
+      }
+    },
+    {
+      "id": "linear",
+      "name": "Linear MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "planning"
+      ],
+      "maker": "Linear",
+      "tier": "vendor",
+      "source": "https://linear.app/docs/mcp",
+      "what": "Finds, creates and updates issues, projects, comments and other objects in Linear. Hosted by Linear. A read only address exists.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "registry app.linear/linear 1.0.1",
+        "lastReleaseAt": "2026-08-04T09:59:17Z",
+        "lastPushAt": null
+      },
+      "pinned": "registry app.linear/linear 1.0.1",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Linear's page prints no tool list, only that tools find, create and update. Sends, spends and deletes were not confirmed.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "linear-server",
+              "--scope",
+              "user",
+              "https://mcp.linear.app/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http linear-server --scope user https://mcp.linear.app/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login linear-server in a terminal. A browser opens.",
+          "Codex: codex mcp add linear --url https://mcp.linear.app/mcp, then codex mcp login linear",
+          "Read only: use the address https://mcp.linear.app/mcp/readonly instead.",
+          "A Linear API key or OAuth token can be sent as a bearer header instead of signing in."
+        ]
+      }
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian MCP Server",
+      "kind": "mcp-server",
+      "purposes": [
+        "planning",
+        "docs"
+      ],
+      "maker": "Atlassian",
+      "tier": "vendor",
+      "source": "https://github.com/atlassian/atlassian-mcp-server",
+      "what": "Reads, searches and writes Jira, Confluence, Bitbucket, Loom, Goals, Projects, Teams and Compass. Jira delete and manage tool groups exist and stay off until an admin turns them on.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-10T20:27:29Z"
+      },
+      "pinned": "registry com.atlassian/atlassian-mcp-server 2.0.0 (repository head b74220d41142fae52b4f680c805b2ab81050991a)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "atlassian",
+              "--scope",
+              "user",
+              "https://mcp.atlassian.com/v2/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http atlassian --scope user https://mcp.atlassian.com/v2/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login atlassian in a terminal. A browser opens.",
+          "Codex: codex mcp add atlassian --url https://mcp.atlassian.com/v2/mcp",
+          "An API token works for a setup with no browser, unless the organisation admin has switched token sign in off.",
+          "The old SSE address stopped on 30 June 2026. Use the address above."
+        ]
+      }
+    },
+    {
+      "id": "notion",
+      "name": "Notion MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "docs",
+        "planning"
+      ],
+      "maker": "Notion",
+      "tier": "vendor",
+      "source": "https://developers.notion.com/docs/get-started-with-mcp",
+      "what": "Searches and reads a Notion workspace, creates, updates, moves and duplicates pages and databases, adds comments, and moves pages and databases to Trash. Hosted by Notion.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "antigravity"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "registry com.notion/mcp 1.0.1",
+        "lastReleaseAt": "2025-09-11T22:25:50Z",
+        "lastPushAt": null
+      },
+      "pinned": "registry com.notion/mcp 1.0.1",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "notion",
+              "--scope",
+              "user",
+              "https://mcp.notion.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http notion --scope user https://mcp.notion.com/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login notion in a terminal. A browser opens.",
+          "Codex: add [mcp_servers.notion] with url = \"https://mcp.notion.com/mcp\" to ~/.codex/config.toml, then run codex mcp login notion",
+          "Sign in through the browser is the only way in. There is no key setup for the hosted server.",
+          "Notion also has a Claude Code plugin with skills and commands: github.com/makenotion/claude-code-notion-plugin"
+        ]
+      }
+    },
+    {
+      "id": "slack",
+      "name": "Slack MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "communication"
+      ],
+      "maker": "Slack",
+      "tier": "vendor",
+      "source": "https://docs.slack.dev/ai/mcp-server/",
+      "what": "Slack's hosted server: searches messages, files, users and channels, reads channels and threads, sends and schedules messages, adds reactions, and creates and updates canvases. For Claude Code it comes inside Slack's plugin.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT (slackapi/slack-skills-plugin, the plugin that connects to the server)",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.4.1",
+        "lastReleaseAt": "2026-10-02T23:37:41Z",
+        "lastPushAt": "2026-10-13T23:38:40Z"
+      },
+      "pinned": "slackapi/slack-skills-plugin v1.4.1",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "slack@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "Claude Code, in a session: /plugin install slack@claude-plugins-official",
+          "The same from a terminal: claude plugin install slack@claude-plugins-official",
+          "The plugin sets up the server at https://mcp.slack.com/mcp and adds Slack skills. You sign in to your workspace in the browser the first time it is used.",
+          "A workspace admin may have to approve the app first.",
+          "Adding the address alone is not enough: Slack has no dynamic client registration and only admits registered apps. The plugin carries Slack's own client.",
+          "Codex: codex plugin marketplace add slackapi/slack-skills-plugin, then codex plugin add slack@slack. That gives the skills only; the server is not wired into Codex yet."
+        ]
+      }
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "databases",
+        "backend"
+      ],
+      "maker": "Supabase",
+      "tier": "vendor",
+      "source": "https://github.com/supabase/mcp",
+      "what": "Lists and queries a Supabase project, runs SQL and migrations, deploys edge functions, manages branches and storage settings, and can create, pause and restore projects. A read only switch and a single project scope are set in the address.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "copilot",
+        "opencode",
+        "cursor"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "mcp-server-supabase-v0.13.0",
+        "lastReleaseAt": "2026-09-17T13:36:57Z",
+        "lastPushAt": "2026-10-13T11:42:17Z"
+      },
+      "pinned": "mcp-server-supabase-v0.13.0 (registry com.supabase/mcp 0.13.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "supabase",
+              "--scope",
+              "user",
+              "https://mcp.supabase.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http supabase --scope user https://mcp.supabase.com/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login supabase in a terminal. A browser opens.",
+          "Supabase's own page builds a line for one project, with --scope project and a features list in the address. Use that to keep it to one project.",
+          "Safer: add read_only=true and project_ref with your project to the address, as the README shows.",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.supabase] with url = \"https://mcp.supabase.com/mcp\" to ~/.codex/config.toml, then run codex mcp login supabase",
+          "It asks before create_project and create_branch, which cost money, when the client can show the question."
+        ]
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "design",
+        "frontend"
+      ],
+      "maker": "Figma",
+      "tier": "vendor",
+      "source": "https://github.com/figma/mcp-server-guide",
+      "what": "Reads design context, variables, screenshots and Code Connect maps from Figma files. The hosted server also writes to the canvas: use_figma creates, edits and deletes objects, and image generation uses Figma AI credits.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "gemini"
+      ],
+      "licence": "No licence file in the repository",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T19:05:47Z"
+      },
+      "pinned": "registry com.figma.mcp/mcp 1.0.3 (repository head b0bfad2ae63dfdc1af201c5542b5c8cf93778b33)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "figma",
+              "--scope",
+              "user",
+              "https://mcp.figma.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code, the server alone: claude mcp add --transport http figma --scope user https://mcp.figma.com/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login figma in a terminal. A browser opens.",
+          "Figma recommends its plugin, which adds skills as well: claude plugin install figma@claude-plugins-official",
+          "Gemini CLI: gemini extensions install https://github.com/figma/mcp-server-guide",
+          "Read limits depend on your Figma seat and plan. Starter plans and View or Collab seats get up to 6 tool calls a month."
+        ]
+      }
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "payments",
+        "finance"
+      ],
+      "maker": "Stripe",
+      "tier": "vendor",
+      "source": "https://docs.stripe.com/mcp",
+      "what": "Reads and writes the Stripe API: customers, invoices, subscriptions, refunds, payment links and more, plus Treasury tools that send and transfer money. One tool can call any write method of the API.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex"
+      ],
+      "licence": "MIT (stripe/ai repository)",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-14T00:44:49Z"
+      },
+      "pinned": "registry com.stripe/mcp 0.2.4 (stripe/ai head 789ef5e0a55ee1d0787a5974660b15bf76dc29b5)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "stripe_api_write reaches any POST, PATCH, PUT and DELETE method, so it can charge, refund, delete and send invoices to customers.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "stripe",
+              "--scope",
+              "user",
+              "https://mcp.stripe.com"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http stripe --scope user https://mcp.stripe.com",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login stripe in a terminal. A browser opens. You choose live or sandbox accounts and the permissions for each.",
+          "Codex: codex mcp add stripe --url https://mcp.stripe.com",
+          "Where sign in is not possible, the only other way is a Stripe agent API key sent as a bearer header and kept in an environment variable.",
+          "From 31 October 2026 Stripe rejects full access secret keys and restricted keys without the Agent tag.",
+          "Turn on your client's tool approval so each call is reviewed before it runs. Stripe asks for that.",
+          "Stripe's own setup command, which also installs its skills: stripe agent setup"
+        ]
+      }
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "cloud",
+        "frontend"
+      ],
+      "maker": "Vercel",
+      "tier": "vendor",
+      "source": "https://vercel.com/docs/agent-resources/vercel-mcp",
+      "what": "Reads projects, deployments, logs and analytics, creates and cancels deployments, edits projects, domains and environment variables, and can buy domains, credits, add ons and the Pro plan.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "opencode"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "registry com.vercel/vercel-mcp 0.0.3",
+        "lastReleaseAt": "2026-01-14T18:38:33Z",
+        "lastPushAt": null
+      },
+      "pinned": "registry com.vercel/vercel-mcp 0.0.3",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "vercel",
+              "--scope",
+              "user",
+              "https://mcp.vercel.com"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http vercel --scope user https://mcp.vercel.com",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login vercel in a terminal. A browser opens.",
+          "Codex: codex mcp add vercel --url https://mcp.vercel.com",
+          "Vercel only admits clients it has reviewed and approved. Claude Code and Codex CLI are on its list.",
+          "It has purchase tools. Read the tools page before an agent uses it alone."
+        ]
+      }
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare API MCP Server",
+      "kind": "mcp-server",
+      "purposes": [
+        "cloud"
+      ],
+      "maker": "Cloudflare",
+      "tier": "vendor",
+      "source": "https://github.com/cloudflare/mcp",
+      "what": "Three tools cover the whole Cloudflare API, about 2,500 endpoints: search the docs, search the API description, and run code that calls any endpoint. What it may change is set by the permissions chosen at sign in.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T17:47:46Z"
+      },
+      "pinned": "e85737947299bbb9b5858fc9ae6bc6d1e6f9a3ba (repository head)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "cloudflare-api",
+              "--scope",
+              "user",
+              "https://mcp.cloudflare.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "The README gives the address and no line for a named client. In Claude Code that is: claude mcp add --transport http cloudflare-api --scope user https://mcp.cloudflare.com/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login cloudflare-api in a terminal. A browser opens. You pick the permissions there.",
+          "Without a browser: create a Cloudflare API token with the permissions you need and send it as a bearer header.",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.cloudflare-api] with url = \"https://mcp.cloudflare.com/mcp\" to ~/.codex/config.toml, then run codex mcp login cloudflare-api",
+          "Cloudflare calls this its recommended server and lists some of its older single product servers as deprecated."
+        ]
+      }
+    },
+    {
+      "id": "aws-mcp-server",
+      "name": "AWS MCP Server",
+      "kind": "mcp-server",
+      "purposes": [
+        "cloud"
+      ],
+      "maker": "AWS",
+      "tier": "vendor",
+      "source": "https://docs.aws.amazon.com/agent-toolkit/latest/userguide/getting-started-aws-mcp-server.html",
+      "what": "AWS's managed server: makes any authenticated AWS API call, runs scripts in a sandbox, and searches and reads AWS documentation. It can do whatever the signed in identity is allowed to do.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "licence": "Apache-2.0 (aws/mcp-proxy-for-aws, the optional local proxy)",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.7.0",
+        "lastReleaseAt": "2026-09-15T11:18:17Z",
+        "lastPushAt": "2026-10-13T11:06:13Z"
+      },
+      "pinned": "aws/mcp-proxy-for-aws v1.7.0 (the optional local proxy; the hosted server has no version)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Any AWS API call includes creating paid resources, deleting them, and sending mail or text messages through AWS services.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "aws-mcp",
+              "https://aws-mcp.us-east-1.api.aws/mcp",
+              "--transport",
+              "http",
+              "--scope",
+              "user"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "First attach the managed policy AWSMCPSignInOAuthAccessPolicy to your IAM role or user.",
+          "Claude Code: claude mcp add aws-mcp https://aws-mcp.us-east-1.api.aws/mcp --transport http",
+          "The first tool call opens AWS sign in in the browser. Tokens last 1 hour and renew for up to 12.",
+          "Another Region: swap us-east-1 in the address. The page lists eight.",
+          "Codex: codex mcp add aws-mcp --url https://aws-mcp.us-east-1.api.aws/mcp?oauth=initialize",
+          "For several accounts, a default Region or a read only mode, AWS points to its local proxy instead: aws login, then the server command uvx mcp-proxy-for-aws-cli@latest https://aws-mcp.us-east-1.api.aws/mcp --metadata AWS_REGION=us-west-2",
+          "The proxy takes --read-only to hide the tools that may write."
+        ]
+      }
+    },
+    {
+      "id": "terraform",
+      "name": "Terraform MCP Server",
+      "kind": "mcp-server",
+      "purposes": [
+        "cloud"
+      ],
+      "maker": "HashiCorp",
+      "tier": "vendor",
+      "source": "https://github.com/hashicorp/terraform-mcp-server",
+      "what": "Looks up providers, modules and policies in the Terraform Registry with no sign in. With a token and the terraform tool group it reads and changes HCP Terraform workspaces, variables and runs, including plan, apply and a safe workspace delete.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "licence": "MPL-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "bundled-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.3.0",
+        "lastReleaseAt": "2026-08-26T17:30:29Z",
+        "lastPushAt": "2026-10-13T22:42:41Z"
+      },
+      "pinned": "v1.3.0 (hashicorp/terraform-mcp-server:1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "The app starts it with no token and only the registry tools, which read. The label is for the whole server, as it is with a token.",
+      "install": {
+        "door": "mcp-local",
+        "ref": "terraform",
+        "manual": [
+          "Needs Docker, installed and running.",
+          "By hand in Claude Code: claude mcp add terraform -s user -t stdio -- docker run -i --rm hashicorp/terraform-mcp-server",
+          "By hand in Codex: codex mcp add terraform -- docker run -i --rm hashicorp/terraform-mcp-server",
+          "For HCP Terraform or Terraform Enterprise add TFE_ADDRESS and TFE_TOKEN to the docker line and choose the tool groups with --toolsets. The app does neither.",
+          "Tools that need approval stay off unless ENABLE_TF_OPERATIONS is set."
+        ]
+      }
+    },
+    {
+      "id": "semgrep",
+      "name": "Semgrep MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "security"
+      ],
+      "maker": "Semgrep",
+      "tier": "vendor",
+      "source": "https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp",
+      "what": "Scans code for security problems, runs custom rules and supply chain scans, and reads findings from the Semgrep platform when a token is set. For Claude Code it comes as the Semgrep Guardian plugin: the server, hooks that scan what an agent writes, and skills.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "LGPL-2.1 (semgrep/semgrep). The plugin repository has no licence file.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hooks",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.180.0",
+        "lastReleaseAt": "2026-10-07T23:17:11Z",
+        "lastPushAt": "2026-10-14T00:05:26Z"
+      },
+      "pinned": "semgrep v1.180.0; plugin semgrep 2.8.1",
+      "checkedAt": "2026-10-14",
+      "riskNote": "The plugin adds hooks that run before and after every file write and shell command, and a setup skill that installs the Semgrep program.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "semgrep@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "Claude Code, as the README says: open /plugin, go to Discover, search for Semgrep and install it.",
+          "The same from a terminal: claude plugin install semgrep@claude-plugins-official",
+          "Then run /setup-semgrep-plugin in a session. It also installs the Semgrep program.",
+          "Other clients: brew install semgrep, then add a server with the command semgrep and the argument mcp",
+          "With Docker: docker run -i --rm semgrep/semgrep semgrep mcp -t stdio",
+          "Optional: set SEMGREP_APP_TOKEN to connect to Semgrep AppSec Platform."
+        ]
+      }
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "data",
+        "observability"
+      ],
+      "maker": "PostHog",
+      "tier": "vendor",
+      "source": "https://posthog.com/docs/model-context-protocol",
+      "what": "Reads and writes across PostHog: analytics queries and SQL, feature flags, experiments, dashboards, error tracking, data pipelines and support tickets. Hundreds of tools, with many delete tools, ticket replies and broadcasts.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-14T02:02:15Z"
+      },
+      "pinned": "registry io.github.PostHog/mcp 1.0.1 (PostHog/posthog head 77044003eb637d36abce1f85fa7715833978bf8e)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "posthog",
+              "--scope",
+              "user",
+              "https://mcp.posthog.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http posthog https://mcp.posthog.com/mcp -s user",
+          "The first use asks you to log in to PostHog. It routes you to the US or EU region by your account.",
+          "Codex: codex mcp add posthog --url https://mcp.posthog.com/mcp",
+          "PostHog's own installer for several clients: npx @posthog/wizard mcp add",
+          "Some tools use models inside PostHog and may be billed as PostHog AI spend."
+        ]
+      }
+    },
+    {
+      "id": "hubspot",
+      "name": "HubSpot MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "sales",
+        "marketing"
+      ],
+      "maker": "HubSpot",
+      "tier": "vendor",
+      "source": "https://developers.hubspot.com/docs/apps/developer-platform/build-apps/integrate-with-the-remote-hubspot-mcp-server",
+      "what": "Searches and reads CRM records, conversations, owners and reports, and creates or updates CRM records, campaigns, marketing email drafts, segments and properties. It can create, edit and publish landing pages, site pages and blog posts.",
+      "wave": 1,
+      "worksWith": [],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Publishing a landing page, site page or blog post puts content in front of people, so it counts as sending.",
+      "install": {
+        "door": "none",
+        "manual": [
+          "In your HubSpot account open MCP Connectors and click Create MCP connector. Give it a name and a redirect URL.",
+          "Keep the connector's client ID and client secret.",
+          "Server address: https://mcp.hubspot.com over streamable HTTP. Sign in is OAuth with PKCE through your connector.",
+          "HubSpot's page gives no command for Claude Code or Codex, so there is no install button.",
+          "Claude Code's own way for a server with a fixed client: claude mcp add --transport http --client-id with your client ID, --client-secret and --callback-port, then the name and the address.",
+          "With that way the connector's redirect URL is http://localhost:PORT/callback, with the port you gave.",
+          "After connecting, run get_user_details to see which tools your account has."
+        ]
+      }
+    },
+    {
+      "id": "intercom",
+      "name": "Intercom MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "support"
+      ],
+      "maker": "Intercom",
+      "tier": "vendor",
+      "source": "https://github.com/intercom/intercom-mcp-server",
+      "what": "Searches and reads Intercom conversations, contacts, companies and Help Center articles, adds internal notes to conversations, and creates and updates articles, which it can publish. 14 tools. US and EU workspaces.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "No licence file in the repository",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2025-09-22T15:10:21Z"
+      },
+      "pinned": "96140be28cf8eeb2ae4a4c860ca1eddcdfb006d9 (repository head; the tool list was read from developers.intercom.com/docs/guides/mcp)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "create_article and update_article can set an article to published, which puts it in the Help Center. Internal notes go to teammates only.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "intercom",
+              "--scope",
+              "user",
+              "https://mcp.intercom.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Intercom gives the address and points to the Claude Code documentation. In Claude Code that is: claude mcp add --transport http intercom --scope user https://mcp.intercom.com/mcp",
+          "EU workspace: use https://mcp.eu.intercom.com/mcp instead. Australian workspaces are not supported yet.",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login intercom in a terminal. A browser opens.",
+          "An Intercom API token as a bearer header is the other way in.",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.intercom] with url = \"https://mcp.intercom.com/mcp\" to ~/.codex/config.toml, then run codex mcp login intercom"
+        ]
+      }
+    },
+    {
+      "id": "canva",
+      "name": "Canva MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "design"
+      ],
+      "maker": "Canva",
+      "tier": "vendor",
+      "source": "https://github.com/canva-sdks/canva-skills/tree/main/plugins/canva",
+      "what": "Canva's hosted server. Its registry record says it creates, searches, edits and exports designs and assets. Canva's setup page refused an automated read, so its tool list was not read.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-06-30T23:20:03Z"
+      },
+      "pinned": "registry com.canva.mcp/mcp 1.0.0",
+      "checkedAt": "2026-10-14",
+      "riskNote": "The tool list was not read. Reads and writes are taken from the registry description. Sends, spends and deletes are not confirmed.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "canva",
+              "--scope",
+              "user",
+              "https://mcp.canva.com/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "The address is in the official MCP registry and in Canva's own plugin. In Claude Code that is: claude mcp add --transport http canva --scope user https://mcp.canva.com/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login canva in a terminal. A browser opens.",
+          "Or Canva's plugin, which adds six skills as well: claude plugin install canva@claude-plugins-official",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.canva] with url = \"https://mcp.canva.com/mcp\" to ~/.codex/config.toml, then run codex mcp login canva"
+        ]
+      }
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier MCP",
+      "kind": "mcp-server",
+      "purposes": [
+        "automation"
+      ],
+      "maker": "Zapier",
+      "tier": "vendor",
+      "source": "https://github.com/zapier/zapier-mcp",
+      "what": "One hosted server that runs the Zapier actions a person switches on, across thousands of apps: send messages, pull data, trigger workflows. There is no fixed tool list.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "copilot",
+        "gemini"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-07-29T21:42:17Z"
+      },
+      "pinned": "registry com.zapier/mcp 1.0.1 (repository head 5360f152b96735712e5f925ad728732cb86888df)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Its tools are whatever actions you switch on in Zapier, so it can do what those apps can, spending and deleting included.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "Zapier-MCP",
+              "--scope",
+              "user",
+              "https://mcp.zapier.com/api/v1/connect"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Claude Code: claude mcp add --transport http \"Zapier-MCP\" https://mcp.zapier.com/api/v1/connect",
+          "Sign in with your Zapier account when the browser opens. Zapier makes the server during that sign in, so do not create one first.",
+          "Codex: codex mcp add zapier --url https://mcp.zapier.com/api/v1/connect, then codex mcp login zapier",
+          "Or the plugin: /plugin install zapier@claude-plugins-official",
+          "On a Team plan an owner may have to approve it."
+        ]
+      }
+    },
+    {
+      "id": "fireflies",
+      "name": "Fireflies MCP server",
+      "kind": "mcp-server",
+      "purposes": [
+        "calendar"
+      ],
+      "maker": "Fireflies.ai",
+      "tier": "vendor",
+      "source": "https://docs.fireflies.ai/getting-started/mcp-configuration",
+      "what": "Searches and reads meeting transcripts, summaries, soundbites, contacts and analytics, and can create soundbites, rename or move a meeting, and share a meeting by email or take that access back. 19 tools.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hosted-server",
+      "health": {
+        "archived": false,
+        "lastRelease": "registry ai.fireflies/fireflies 1.1.0",
+        "lastReleaseAt": "2026-09-14T18:59:03Z",
+        "lastPushAt": null
+      },
+      "pinned": "registry ai.fireflies/fireflies 1.1.0",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "mcp",
+              "add",
+              "--transport",
+              "http",
+              "fireflies",
+              "--scope",
+              "user",
+              "https://api.fireflies.ai/mcp"
+            ],
+            "label": "Add the server to Claude Code, for every project"
+          }
+        ],
+        "manual": [
+          "Fireflies gives the address and says the steps depend on the client. In Claude Code that is: claude mcp add --transport http fireflies --scope user https://api.fireflies.ai/mcp",
+          "Then sign in: run /mcp in a Claude Code session and pick the server, or run claude mcp login fireflies in a terminal. A browser opens.",
+          "A Fireflies API key as a bearer header is the other way in.",
+          "Codex: the maker gives no line. Codex's own way for a hosted server is to add [mcp_servers.fireflies] with url = \"https://api.fireflies.ai/mcp\" to ~/.codex/config.toml, then run codex mcp login fireflies",
+          "Streamable HTTP only. Fireflies has retired the old SSE transport."
+        ]
+      }
+    },
+    {
+      "id": "pdf",
+      "name": "PDF skill",
+      "kind": "skill",
+      "purposes": [
+        "documents"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/pdf",
+      "what": "Reads and extracts text and tables from PDF files, merges, splits and rotates them, fills forms, adds watermarks, encrypts, and creates new PDFs. Ships Python scripts.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Proprietary. All rights reserved by Anthropic. The LICENSE.txt in the skill folder forbids copying, keeping copies outside Anthropic's services, derivative works and redistribution.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-09T18:45:52Z"
+      },
+      "pinned": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/skills"
+            ],
+            "label": "Add Anthropic's skills list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "document-skills@anthropic-agent-skills"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin marketplace add anthropics/skills",
+          "Then: /plugin install document-skills@anthropic-agent-skills",
+          "The same from a terminal: claude plugin marketplace add anthropics/skills, then claude plugin install document-skills@anthropic-agent-skills",
+          "That one plugin holds all four document skills: pdf, docx, pptx and xlsx.",
+          "Do not copy the skill folder by hand. Its licence forbids copies outside Anthropic's services.",
+          "Claude Code only. The licence ties the skills to Anthropic's services."
+        ]
+      }
+    },
+    {
+      "id": "docx",
+      "name": "Word document skill",
+      "kind": "skill",
+      "purposes": [
+        "documents"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/docx",
+      "what": "Creates, reads and edits Word files and templates. Ships Python scripts and the Office XML schemas.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Proprietary. All rights reserved by Anthropic. The LICENSE.txt in the skill folder forbids copying, keeping copies outside Anthropic's services, derivative works and redistribution.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-09T18:45:52Z"
+      },
+      "pinned": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/skills"
+            ],
+            "label": "Add Anthropic's skills list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "document-skills@anthropic-agent-skills"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin marketplace add anthropics/skills",
+          "Then: /plugin install document-skills@anthropic-agent-skills",
+          "The same from a terminal: claude plugin marketplace add anthropics/skills, then claude plugin install document-skills@anthropic-agent-skills",
+          "That one plugin holds all four document skills: pdf, docx, pptx and xlsx.",
+          "Do not copy the skill folder by hand. Its licence forbids copies outside Anthropic's services.",
+          "Claude Code only. The licence ties the skills to Anthropic's services."
+        ]
+      }
+    },
+    {
+      "id": "pptx",
+      "name": "PowerPoint skill",
+      "kind": "skill",
+      "purposes": [
+        "documents"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/pptx",
+      "what": "Creates, reads and edits PowerPoint files and templates. Ships Python scripts and the Office XML schemas.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Proprietary. All rights reserved by Anthropic. The LICENSE.txt in the skill folder forbids copying, keeping copies outside Anthropic's services, derivative works and redistribution.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-09T18:45:52Z"
+      },
+      "pinned": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/skills"
+            ],
+            "label": "Add Anthropic's skills list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "document-skills@anthropic-agent-skills"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin marketplace add anthropics/skills",
+          "Then: /plugin install document-skills@anthropic-agent-skills",
+          "The same from a terminal: claude plugin marketplace add anthropics/skills, then claude plugin install document-skills@anthropic-agent-skills",
+          "That one plugin holds all four document skills: pdf, docx, pptx and xlsx.",
+          "Do not copy the skill folder by hand. Its licence forbids copies outside Anthropic's services.",
+          "Claude Code only. The licence ties the skills to Anthropic's services."
+        ]
+      }
+    },
+    {
+      "id": "xlsx",
+      "name": "Spreadsheet skill",
+      "kind": "skill",
+      "purposes": [
+        "documents"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
+      "what": "Opens, edits, fixes and creates spreadsheets (xlsx, xlsm, csv, tsv), with formulas, formatting and charts. Ships Python scripts.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Proprietary. All rights reserved by Anthropic. The LICENSE.txt in the skill folder forbids copying, keeping copies outside Anthropic's services, derivative works and redistribution.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-09T18:45:52Z"
+      },
+      "pinned": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/skills"
+            ],
+            "label": "Add Anthropic's skills list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "document-skills@anthropic-agent-skills"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin marketplace add anthropics/skills",
+          "Then: /plugin install document-skills@anthropic-agent-skills",
+          "The same from a terminal: claude plugin marketplace add anthropics/skills, then claude plugin install document-skills@anthropic-agent-skills",
+          "That one plugin holds all four document skills: pdf, docx, pptx and xlsx.",
+          "Do not copy the skill folder by hand. Its licence forbids copies outside Anthropic's services.",
+          "Claude Code only. The licence ties the skills to Anthropic's services."
+        ]
+      }
+    },
+    {
+      "id": "skill-creator",
+      "name": "Skill creator",
+      "kind": "skill",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+      "what": "Guides writing a new skill or improving one, runs evals against it and benchmarks the results. Ships Python scripts and three helper agents.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-09T18:45:52Z"
+      },
+      "pinned": "dbd4588f9e1033efb41dad4bef2f7947c8993d44",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "skill-folder",
+        "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+        "manual": [
+          "The button copies the folder into your skills folder. The licence, Apache 2.0, allows that.",
+          "By hand: copy the folder skills/skill-creator from https://github.com/anthropics/skills into ~/.claude/skills/skill-creator",
+          "Or as a plugin: claude plugin install skill-creator@claude-plugins-official"
+        ]
+      }
+    },
+    {
+      "id": "frontend-design",
+      "name": "Frontend design",
+      "kind": "plugin",
+      "purposes": [
+        "frontend",
+        "design"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/frontend-design",
+      "what": "One skill of written guidance on visual design for user interfaces: direction, typography and avoiding templated defaults. No code.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": false,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "frontend-design@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install frontend-design@claude-plugins-official",
+          "The same from a terminal: claude plugin install frontend-design@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins"
+        ]
+      }
+    },
+    {
+      "id": "code-review",
+      "name": "Code review",
+      "kind": "plugin",
+      "purposes": [
+        "code-review"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review",
+      "what": "One command that reviews a pull request. It is allowed to read the pull request and issues through the gh program and to post a comment on the pull request.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "code-review@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install code-review@claude-plugins-official",
+          "The same from a terminal: claude plugin install code-review@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "It works through the gh program, which must be installed and signed in."
+        ]
+      }
+    },
+    {
+      "id": "feature-dev",
+      "name": "Feature dev",
+      "kind": "plugin",
+      "purposes": [
+        "planning",
+        "specs"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev",
+      "what": "One command and three helper agents (explorer, architect, reviewer) that walk a feature from reading the codebase to design to review. Markdown only.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": false,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "feature-dev@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install feature-dev@claude-plugins-official",
+          "The same from a terminal: claude plugin install feature-dev@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins"
+        ]
+      }
+    },
+    {
+      "id": "security-guidance",
+      "name": "Security guidance",
+      "kind": "plugin",
+      "purposes": [
+        "security"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance",
+      "what": "Hooks that warn on about 25 risky code patterns at edit time, then send each finished turn's diff and file contents to a model for a security review and feed the findings back.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hooks",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 2.0.13)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "Each review is a model call on the person's plan or API key.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "security-guidance@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install security-guidance@claude-plugins-official",
+          "The same from a terminal: claude plugin install security-guidance@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins"
+        ]
+      }
+    },
+    {
+      "id": "clangd-lsp",
+      "name": "clangd-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/clangd-lsp",
+      "what": "C and C++ (clangd) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: clangd --background-index",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "clangd-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install clangd-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install clangd-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: clangd --background-index"
+        ]
+      }
+    },
+    {
+      "id": "csharp-lsp",
+      "name": "csharp-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/csharp-lsp",
+      "what": "C# language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: csharp-ls",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "csharp-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install csharp-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install csharp-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: csharp-ls"
+        ]
+      }
+    },
+    {
+      "id": "gopls-lsp",
+      "name": "gopls-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/gopls-lsp",
+      "what": "Go (gopls) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: gopls",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "gopls-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install gopls-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install gopls-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: gopls"
+        ]
+      }
+    },
+    {
+      "id": "jdtls-lsp",
+      "name": "jdtls-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/jdtls-lsp",
+      "what": "Java (Eclipse JDT.LS) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: jdtls",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "jdtls-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install jdtls-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install jdtls-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: jdtls"
+        ]
+      }
+    },
+    {
+      "id": "kotlin-lsp",
+      "name": "kotlin-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/kotlin-lsp",
+      "what": "Kotlin language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: kotlin-lsp --stdio",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "kotlin-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install kotlin-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install kotlin-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: kotlin-lsp --stdio"
+        ]
+      }
+    },
+    {
+      "id": "lua-lsp",
+      "name": "lua-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/lua-lsp",
+      "what": "Lua language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: lua-language-server",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "lua-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install lua-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install lua-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: lua-language-server"
+        ]
+      }
+    },
+    {
+      "id": "php-lsp",
+      "name": "php-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/php-lsp",
+      "what": "PHP (Intelephense) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: intelephense --stdio",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "php-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install php-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install php-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: intelephense --stdio"
+        ]
+      }
+    },
+    {
+      "id": "pyright-lsp",
+      "name": "pyright-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/pyright-lsp",
+      "what": "Python (Pyright) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: pyright-langserver --stdio",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "pyright-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install pyright-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install pyright-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: pyright-langserver --stdio"
+        ]
+      }
+    },
+    {
+      "id": "ruby-lsp",
+      "name": "ruby-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ruby-lsp",
+      "what": "Ruby language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: ruby-lsp",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "ruby-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install ruby-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install ruby-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: ruby-lsp"
+        ]
+      }
+    },
+    {
+      "id": "rust-analyzer-lsp",
+      "name": "rust-analyzer-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/rust-analyzer-lsp",
+      "what": "Rust (rust-analyzer) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: rust-analyzer",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "rust-analyzer-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install rust-analyzer-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install rust-analyzer-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: rust-analyzer"
+        ]
+      }
+    },
+    {
+      "id": "swift-lsp",
+      "name": "swift-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/swift-lsp",
+      "what": "Swift (SourceKit-LSP) language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: sourcekit-lsp",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "swift-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install swift-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install swift-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: sourcekit-lsp"
+        ]
+      }
+    },
+    {
+      "id": "typescript-lsp",
+      "name": "typescript-lsp",
+      "kind": "plugin",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/claude-plugins-official/tree/main/plugins/typescript-lsp",
+      "what": "TypeScript and JavaScript language server for Claude Code. The plugin only holds the launch setting. You install the server program yourself; it starts as: typescript-language-server --stdio",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T21:39:39Z"
+      },
+      "pinned": "8d392c8169665866be1d95f2bfeda5aaae7149dd (plugin version 1.0.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "typescript-lsp@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install typescript-lsp@claude-plugins-official",
+          "The same from a terminal: claude plugin install typescript-lsp@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Install the language server program yourself. The plugin starts it as: typescript-language-server --stdio"
+        ]
+      }
+    },
+    {
+      "id": "kw-productivity",
+      "name": "Productivity role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "planning"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/productivity",
+      "what": "Task management, day planning and a memory of work context. 4 skills. Sets up 9 hosted connectors: Slack, Notion, Asana, Linear, Atlassian, monday, ClickUp, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.1)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "productivity@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install productivity@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-enterprise-search",
+      "name": "Enterprise search role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "search",
+        "memory"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/enterprise-search",
+      "what": "One search across a company's email, chat, documents and wikis. 5 skills. Sets up 7 hosted connectors: Slack, Notion, Guru, Atlassian, Asana, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "enterprise-search@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install enterprise-search@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-sales",
+      "name": "Sales role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "sales"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/sales",
+      "what": "Call prep and follow up, account research, deal and pipeline review, forecasts. 36 skills. Sets up 23 hosted connectors, among them Slack, HubSpot, Salesforce, Close, Clay, ZoomInfo, Apollo, Outreach, Gong, Zoom, Calendly, Notion and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 2.0.1)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "sales@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install sales@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-finance",
+      "name": "Finance role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "finance"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/finance",
+      "what": "Journal entries, reconciliation, financial statements, variance analysis and close. 8 skills. Sets up 6 hosted connectors: Snowflake, Databricks, BigQuery, Slack, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "finance@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install finance@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-data",
+      "name": "Data role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "data",
+        "databases"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/data",
+      "what": "Data analysis work against a warehouse and analytics tools. Not the plugin named data in the official list, which is Astronomer's. 10 skills and Python scripts. Sets up 8 hosted connectors: Snowflake, Databricks, BigQuery, Hex, Amplitude (two regions), Atlassian and Definite.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.1.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "data@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install data@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-legal",
+      "name": "Legal role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "legal"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/legal",
+      "what": "Contract review, NDA triage, compliance workflows and legal briefs. 9 skills. Sets up 7 hosted connectors: Slack, Box, Egnyte, Atlassian, DocuSign, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "legal@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install legal@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-marketing",
+      "name": "Marketing role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "marketing"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/marketing",
+      "what": "Content, campaign plans, brand voice, competitor tracking and performance reports. 8 skills. Sets up 13 hosted connectors, among them Slack, Canva, Figma, HubSpot, Amplitude, Notion, Ahrefs, Similarweb, Klaviyo, Supermetrics and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "marketing@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install marketing@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-customer-support",
+      "name": "Customer support role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "support"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/customer-support",
+      "what": "Ticket triage, reply drafts, escalations and knowledge base articles. 5 skills. Sets up 8 hosted connectors: Slack, Intercom, HubSpot, Guru, Atlassian, Notion, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "customer-support@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install customer-support@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-product-management",
+      "name": "Product management role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "planning",
+        "specs"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/product-management",
+      "what": "Feature specs, roadmaps, research synthesis and stakeholder updates. 8 skills. Sets up 16 hosted connectors, among them Slack, Linear, Asana, monday, ClickUp, Atlassian, Notion, Figma, Amplitude, Pendo, Intercom, Fireflies and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "product-management@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install product-management@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-bio-research",
+      "name": "Bio research role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "research"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/bio-research",
+      "what": "Preclinical research: literature search, genomics analysis and target prioritisation. 6 skills and 25 Python scripts. Sets up 11 hosted connectors: PubMed, BioRender, bioRxiv, Consensus, ClinicalTrials, ChEMBL, Synapse, Wiley, Owkin, Open Targets and Benchling.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "bio-research@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install bio-research@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-engineering",
+      "name": "Engineering role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "code-review",
+        "devtools"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/engineering",
+      "what": "Standups, code review, architecture decisions, incident response and technical docs. 10 skills. Sets up 10 hosted connectors: Slack, Linear, Asana, Atlassian, Notion, GitHub, PagerDuty, Datadog, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "engineering@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install engineering@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-human-resources",
+      "name": "Human resources role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "hr"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/human-resources",
+      "what": "Recruiting, onboarding, performance reviews, compensation analysis and policy guidance. 9 skills. Sets up 5 hosted connectors: Slack, Google Calendar, Gmail, Notion and Atlassian.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "human-resources@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install human-resources@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-design",
+      "name": "Design role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "design"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/design",
+      "what": "Design critique, design systems, UX writing, accessibility audits, research synthesis and handoff. 7 skills. Sets up 9 hosted connectors: Slack, Figma, Linear, Asana, Atlassian, Notion, Intercom, Google Calendar and Gmail.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "design@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install design@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-operations",
+      "name": "Operations role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "planning"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/operations",
+      "what": "Vendor management, process docs, change management, capacity planning and compliance tracking. 9 skills. Sets up 6 hosted connectors: Slack, Google Calendar, Gmail, Notion, Atlassian and Asana.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.3.0)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "operations@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install operations@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "kw-small-business",
+      "name": "Small business role plugin",
+      "kind": "plugin",
+      "purposes": [
+        "finance",
+        "payments",
+        "sales"
+      ],
+      "maker": "Anthropic",
+      "tier": "first-party",
+      "source": "https://github.com/anthropics/knowledge-work-plugins/tree/main/small-business",
+      "what": "Ready made workflows for running a small business. 44 skills. Sets up 35 hosted connectors, among them Stripe, PayPal, Square, Ramp, Gusto, QuickBooks, Xero, Shopify, HubSpot, Mailchimp, DocuSign, Slack, Gmail and Zapier.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "Apache-2.0",
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": true,
+        "spends": true,
+        "deletes": true
+      },
+      "ships": "instructions",
+      "health": {
+        "archived": false,
+        "lastRelease": null,
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-12T10:20:03Z"
+      },
+      "pinned": "02ffa99ff00ce4d3046ccebabb8357cb39f3ab06 (plugin version 1.35.1)",
+      "checkedAt": "2026-10-14",
+      "riskNote": "What it can do comes from the connectors it sets up. Their tools were not read one by one, so these answers are the most likely ones, not checked ones.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/knowledge-work-plugins"
+            ],
+            "label": "Add Anthropic's knowledge work plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "small-business@knowledge-work-plugins"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "From a terminal: claude plugin marketplace add anthropics/knowledge-work-plugins",
+          "Then: claude plugin install small-business@knowledge-work-plugins",
+          "Built for Claude Cowork, where it installs from claude.com/plugins. It also works in Claude Code.",
+          "Each connector asks for its own sign in the first time it is used. A connector with no address yet shows as not configured.",
+          "Skills fire when they fit and its commands appear in the session after the next start."
+        ]
+      }
+    },
+    {
+      "id": "superpowers",
+      "name": "Superpowers",
+      "kind": "plugin",
+      "purposes": [
+        "planning",
+        "specs",
+        "testing"
+      ],
+      "maker": "Jesse Vincent (obra)",
+      "tier": "community",
+      "source": "https://github.com/obra/superpowers",
+      "what": "A development method as 15 skills (brainstorm, plan, test first, review, git worktrees) with a session start hook that loads it into every session. Ships shell and JavaScript files.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "copilot",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hooks",
+      "health": {
+        "archived": false,
+        "lastRelease": "v7.0.0",
+        "lastReleaseAt": "2026-10-10T00:28:58Z",
+        "lastPushAt": "2026-10-10T03:03:30Z"
+      },
+      "pinned": "5bf4e78011075bcfc0dc295f0724994cd123ee71 (the commit the official list installs; release v7.0.0 is newer)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "marketplace",
+              "add",
+              "anthropics/claude-plugins-official"
+            ],
+            "label": "Add Anthropic's official plugin list (no change if it is there)"
+          },
+          {
+            "argv": [
+              "claude",
+              "plugin",
+              "install",
+              "superpowers@claude-plugins-official"
+            ],
+            "label": "Install the plugin for your user"
+          }
+        ],
+        "manual": [
+          "In a Claude Code session: /plugin install superpowers@claude-plugins-official",
+          "The same from a terminal: claude plugin install superpowers@claude-plugins-official",
+          "On a machine where Claude Code has never been opened, first run: claude plugin marketplace add anthropics/claude-plugins-official",
+          "It loads the next time Claude Code starts, or after /reload-plugins",
+          "Codex CLI: open /plugins and search for superpowers",
+          "Gemini CLI: gemini extensions install https://github.com/obra/superpowers",
+          "Copilot CLI: copilot plugin marketplace add obra/superpowers-marketplace, then copilot plugin install superpowers@superpowers-marketplace"
+        ]
+      }
+    },
+    {
+      "id": "gh",
+      "name": "GitHub CLI (gh)",
+      "kind": "tool",
+      "purposes": [
+        "source-control"
+      ],
+      "maker": "GitHub",
+      "tier": "vendor",
+      "source": "https://github.com/cli/cli",
+      "what": "GitHub from the terminal: pull requests, issues, releases, workflow runs, secrets, gists, codespaces and raw API calls. Its repo commands include create, archive and delete.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "oauth",
+        "secretNames": [
+          "GH_TOKEN"
+        ]
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.102.0",
+        "lastReleaseAt": "2026-09-30T02:40:02Z",
+        "lastPushAt": "2026-10-13T22:52:11Z"
+      },
+      "pinned": "v2.102.0",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "brew",
+              "install",
+              "gh"
+            ],
+            "label": "Install the GitHub CLI with Homebrew"
+          }
+        ],
+        "manual": [
+          "macOS or Linux with Homebrew, the way its maintainers recommend: brew install gh",
+          "Windows: WinGet, or a download from the releases page. The README links both.",
+          "Then sign in: gh auth login. A browser opens. A token in GH_TOKEN works too."
+        ]
+      }
+    },
+    {
+      "id": "ripgrep",
+      "name": "ripgrep (rg)",
+      "kind": "tool",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Andrew Gallant (BurntSushi)",
+      "tier": "community",
+      "source": "https://github.com/BurntSushi/ripgrep",
+      "what": "Searches files under a folder for a pattern, fast, and respects ignore files. It only reads.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "MIT or Unlicense",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "15.2.0",
+        "lastReleaseAt": "2026-07-15T16:26:10Z",
+        "lastPushAt": "2026-08-04T13:59:44Z"
+      },
+      "pinned": "15.2.0",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "brew",
+              "install",
+              "ripgrep"
+            ],
+            "label": "Install ripgrep with Homebrew"
+          }
+        ],
+        "manual": [
+          "macOS or Linux with Homebrew: brew install ripgrep",
+          "With Rust: cargo install ripgrep",
+          "Windows: winget install BurntSushi.ripgrep.MSVC",
+          "The command it adds is rg."
+        ]
+      }
+    },
+    {
+      "id": "jq",
+      "name": "jq",
+      "kind": "tool",
+      "purposes": [
+        "data",
+        "devtools"
+      ],
+      "maker": "jq project (jqlang)",
+      "tier": "community",
+      "source": "https://github.com/jqlang/jq",
+      "what": "Filters and reshapes JSON on the command line. It reads its input and prints the result.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "MIT (documentation CC BY 3.0)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "jq-1.8.2",
+        "lastReleaseAt": "2026-06-20T14:11:27Z",
+        "lastPushAt": "2026-10-13T07:47:59Z"
+      },
+      "pinned": "jq-1.8.2",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "brew",
+              "install",
+              "jq"
+            ],
+            "label": "Install jq with Homebrew"
+          }
+        ],
+        "manual": [
+          "macOS with Homebrew: brew install jq",
+          "Debian and Ubuntu: sudo apt-get install jq",
+          "Windows: winget install jqlang.jq",
+          "Or download a release from https://github.com/jqlang/jq/releases"
+        ]
+      }
+    },
+    {
+      "id": "uv",
+      "name": "uv",
+      "kind": "tool",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Astral",
+      "tier": "vendor",
+      "source": "https://github.com/astral-sh/uv",
+      "what": "Python package and project manager. Installs Python versions, packages and tools, makes environments, and runs tools straight from the package index with uvx. Many MCP servers start through it.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "Apache-2.0 or MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "0.13.0",
+        "lastReleaseAt": "2026-10-09T19:49:55Z",
+        "lastPushAt": "2026-10-14T00:45:00Z"
+      },
+      "pinned": "0.13.0",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "brew",
+              "install",
+              "uv"
+            ],
+            "label": "Install uv with Homebrew"
+          }
+        ],
+        "manual": [
+          "With Homebrew: brew install uv",
+          "From PyPI: pipx install uv, or pip install uv",
+          "Windows: winget install --id=astral-sh.uv -e",
+          "Astral's own installer is a script piped into a shell. The app never runs one. The README has it if you want it."
+        ]
+      }
+    },
+    {
+      "id": "node",
+      "name": "Node.js",
+      "kind": "tool",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Node.js project (OpenJS Foundation)",
+      "tier": "community",
+      "source": "https://github.com/nodejs/node",
+      "what": "JavaScript runtime. Agents and MCP servers installed with npm or started with npx need it. It runs whatever script it is handed.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "v26.11.1",
+        "lastReleaseAt": "2026-10-07T23:55:23Z",
+        "lastPushAt": "2026-10-14T01:57:04Z"
+      },
+      "pinned": "v26.11.1",
+      "checkedAt": "2026-10-14",
+      "riskNote": "A runtime has no tool list to read. It can do whatever the script it runs can do.",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Download the installer for your system from https://nodejs.org/en/download/ and run it.",
+          "The README gives that download page and no command, so there is no install button.",
+          "Check it: node --version"
+        ]
+      }
+    },
+    {
+      "id": "bun",
+      "name": "Bun",
+      "kind": "tool",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "Oven",
+      "tier": "vendor",
+      "source": "https://github.com/oven-sh/bun",
+      "what": "JavaScript runtime, package manager, bundler and test runner in one program. Adds and removes packages, runs scripts, publishes packages, and runs tools with bunx.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "MIT (bundled parts carry their own licences)",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "bun-v1.4.3",
+        "lastReleaseAt": "2026-10-10T05:24:54Z",
+        "lastPushAt": "2026-10-14T02:04:18Z"
+      },
+      "pinned": "bun-v1.4.3",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "npm",
+              "install",
+              "-g",
+              "bun"
+            ],
+            "label": "Install Bun with npm"
+          }
+        ],
+        "manual": [
+          "With npm: npm install -g bun",
+          "With Homebrew: brew tap oven-sh/bun, then brew install bun",
+          "Oven's own installer is a script piped into a shell. The app never runs one. The README has it if you want it."
+        ]
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "kind": "tool",
+      "purposes": [
+        "sandboxes",
+        "devtools"
+      ],
+      "maker": "Docker",
+      "tier": "vendor",
+      "source": "https://github.com/docker/cli",
+      "what": "Builds, pulls, pushes, runs and removes containers and images. Several servers in this list start as a docker run command.",
+      "wave": 1,
+      "worksWith": [
+        "any"
+      ],
+      "licence": "Apache-2.0 (docker/cli). Docker Desktop has its own terms.",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": true
+      },
+      "canChecked": true,
+      "ships": "binary",
+      "health": {
+        "archived": false,
+        "lastRelease": "v29.9.0 (tag on docker/cli)",
+        "lastReleaseAt": null,
+        "lastPushAt": "2026-10-13T15:27:58Z"
+      },
+      "pinned": "v29.9.0",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Download Docker Desktop for your system from https://docs.docker.com/get-started/get-docker/ and install it.",
+          "Docker gives that download page and no command, so there is no install button.",
+          "Docker Desktop is free for personal use, education, open source that is not commercial, and small businesses: fewer than 250 employees and less than 10 million US dollars a year. Otherwise it needs a paid subscription.",
+          "Start Docker before you start an agent that uses a server in a container."
+        ]
+      }
+    },
+    {
+      "id": "ccusage",
+      "name": "ccusage",
+      "kind": "tool",
+      "purposes": [
+        "usage"
+      ],
+      "maker": "ryoppippi (ccusage organisation)",
+      "tier": "community",
+      "source": "https://github.com/ccusage/ccusage",
+      "what": "Reads the session logs coding agents keep on the machine and reports token use and cost by day, week, month and session.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "opencode",
+        "copilot",
+        "gemini"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": false,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": "v20.0.31",
+        "lastReleaseAt": "2026-10-13T21:37:42Z",
+        "lastPushAt": "2026-10-13T23:28:15Z"
+      },
+      "pinned": "v20.0.31",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Nothing to install: the README says to run it straight from the package runner.",
+          "In a terminal: npx ccusage@latest",
+          "With Bun: bunx ccusage",
+          "A report by day, week, month or session: add daily, weekly, monthly or session."
+        ]
+      }
+    },
+    {
+      "id": "ccstatusline",
+      "name": "ccstatusline",
+      "kind": "status-line",
+      "purposes": [
+        "usage"
+      ],
+      "maker": "sirmalloc",
+      "tier": "community",
+      "source": "https://github.com/sirmalloc/ccstatusline",
+      "what": "A status line for Claude Code that is set up in a terminal menu: model, git branch, token and context use, with themes. It keeps its settings in ~/.config/ccstatusline/settings.json.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.2.32",
+        "lastReleaseAt": "2026-10-09T18:51:51Z",
+        "lastPushAt": "2026-10-13T19:23:41Z"
+      },
+      "pinned": "v2.2.32",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "none",
+        "manual": [
+          "Its setup is a menu in the terminal, so the app cannot run it for you.",
+          "In a terminal: npx -y ccstatusline@latest",
+          "With Bun: bunx -y ccstatusline@latest",
+          "In the menu choose the option that installs it to Claude Code settings.",
+          "Choose Pinned global install in the first setup if Claude Code should stay on one version and not follow the newest."
+        ]
+      }
+    },
+    {
+      "id": "repomix",
+      "name": "Repomix",
+      "kind": "tool",
+      "purposes": [
+        "devtools"
+      ],
+      "maker": "yamadashy",
+      "tier": "community",
+      "source": "https://github.com/yamadashy/repomix",
+      "what": "Packs a whole repository, local or a remote one given by address, into a single file an agent can read.",
+      "wave": 1,
+      "worksWith": [
+        "claude"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.18.1",
+        "lastReleaseAt": "2026-09-21T08:34:49Z",
+        "lastPushAt": "2026-10-11T16:00:19Z"
+      },
+      "pinned": "v1.18.1",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "npm",
+              "install",
+              "-g",
+              "repomix"
+            ],
+            "label": "Install Repomix with npm"
+          }
+        ],
+        "manual": [
+          "With npm: npm install -g repomix",
+          "With Homebrew: brew install repomix",
+          "Then run repomix inside a project folder. It writes one file that holds the repository.",
+          "One try with no install: npx repomix@latest, run inside the project folder. It packs the folder it is run in.",
+          "Claude Code plugins: /plugin marketplace add yamadashy/repomix, then /plugin install repomix-mcp@repomix"
+        ]
+      }
+    },
+    {
+      "id": "spec-kit",
+      "name": "Spec Kit",
+      "kind": "tool",
+      "purposes": [
+        "specs",
+        "planning"
+      ],
+      "maker": "GitHub",
+      "tier": "vendor",
+      "source": "https://github.com/github/spec-kit",
+      "what": "Sets up spec driven development in a project: after install, specify init writes commands, templates and scripts for the chosen agent, then the agent works from spec to plan to tasks.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "copilot",
+        "cursor",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "scripts",
+      "health": {
+        "archived": false,
+        "lastRelease": "v1.2.0",
+        "lastReleaseAt": "2026-10-13T15:49:05Z",
+        "lastPushAt": "2026-10-13T19:35:18Z"
+      },
+      "pinned": "v1.2.0 (PyPI specify-cli 1.2.0)",
+      "checkedAt": "2026-10-14",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "uv",
+              "tool",
+              "install",
+              "specify-cli"
+            ],
+            "label": "Install the Specify CLI with uv"
+          }
+        ],
+        "manual": [
+          "Needs Python 3.11 or later and uv.",
+          "From PyPI, one of its two official channels: uv tool install specify-cli",
+          "Or with pipx: pipx install specify-cli",
+          "The route its maintainers recommend installs from the repository at a release tag: uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v1.2.0",
+          "Then, in a terminal: specify init my-project --integration copilot",
+          "Swap copilot for your agent. The README lists the ones it supports.",
+          "Check it: specify version"
+        ]
+      }
+    },
+    {
+      "id": "cc-safety-net",
+      "name": "CC Safety Net",
+      "kind": "hook-pack",
+      "purposes": [
+        "security"
+      ],
+      "maker": "kenryu42",
+      "tier": "community",
+      "source": "https://github.com/kenryu42/cc-safety-net",
+      "what": "A guard that reads each command or file access before the agent runs it and blocks destructive ones (for example rm -rf and hard git resets) and reads of secrets such as SSH keys and .env files. Its installer writes the hook into the agent's settings.",
+      "wave": 1,
+      "worksWith": [
+        "claude",
+        "codex",
+        "gemini",
+        "antigravity",
+        "copilot",
+        "opencode"
+      ],
+      "licence": "MIT",
+      "signIn": {
+        "kind": "none",
+        "secretNames": []
+      },
+      "can": {
+        "reads": true,
+        "writes": true,
+        "sends": false,
+        "spends": false,
+        "deletes": false
+      },
+      "canChecked": true,
+      "ships": "hooks",
+      "health": {
+        "archived": false,
+        "lastRelease": "v2.6.11",
+        "lastReleaseAt": "2026-10-14T01:51:51Z",
+        "lastPushAt": "2026-10-14T01:51:18Z"
+      },
+      "pinned": "v2.6.11",
+      "checkedAt": "2026-10-14",
+      "riskNote": "The install step runs the newest release, not a pinned one: the maker asks for @latest so an older cached copy is not used.",
+      "install": {
+        "door": "command",
+        "steps": [
+          {
+            "argv": [
+              "npx",
+              "-y",
+              "cc-safety-net@latest",
+              "install",
+              "--claude-code"
+            ],
+            "label": "Install the guard into Claude Code"
+          }
+        ],
+        "manual": [
+          "Needs Node 18 or later.",
+          "Claude Code: npx -y cc-safety-net@latest install --claude-code",
+          "Other agents take their own flag, one per run: --codex, --gemini-cli, --copilot-cli, --opencode, --cursor",
+          "Check that it works: npx -y cc-safety-net@latest doctor",
+          "With no flag the installer opens a menu, so run that form in a terminal yourself.",
+          "Remove it: npx -y cc-safety-net@latest uninstall --claude-code"
+        ]
+      }
+    }
+  ]
+}

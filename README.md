@@ -1,6 +1,6 @@
 # Awesome agent capabilities
 
-MCP servers, skills, plugins and tools you can give an AI agent: Claude Code, Codex, Antigravity, Cursor, GitHub Copilot, OpenCode, Gemini CLI and Grok Build. 2346 items, 621 of them reviewed by us.
+MCP servers, skills, plugins and tools you can give an AI agent: Claude Code, Codex, Antigravity, Cursor, GitHub Copilot, OpenCode, Gemini CLI and Grok Build. 2347 items, 622 of them reviewed by us.
 
 This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.com) shows. The app reads it from this repository, so a change merged here reaches people with no new release of the app.
 
@@ -17,7 +17,7 @@ This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.
 
 ## Contents
 
-- [MCP servers](#mcp-servers) (298)
+- [MCP servers](#mcp-servers) (299)
 - [Skills](#skills) (25)
 - [Skill packs](#skill-packs) (58)
 - [Plugins](#plugins) (109)
@@ -296,6 +296,7 @@ This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.
 ### Video, audio and images
 
 - [Ableton MCP](https://github.com/ahujasid/ableton-mcp): Lets an agent control Ableton Live: read session, track and clip information, create tracks and clips, add or clear MIDI notes, load instruments and effects, set tempo and control playback. Made by ahujasid. Works with any engine.
+- [Animeblip MCP server](https://animeblip.com/docs): Animeblip's own hosted server. Turns one brief into a finished video: script, consistent characters, storyboard, voices, music and the final cut, for ads, product promos, micro dramas, anime series and music videos. Each image and video uses Animeblip credits. Made by Animeblip (Emina Labs LLP). Works with all engines.
 - [Cartesia MCP server](https://github.com/cartesia-ai/cartesia-mcp): Gives an agent Cartesia voice tools: text to speech, speech to text, list, clone, update, localize and delete voices, and manage pronunciation dictionaries. Made by Cartesia. Works with any engine.
 - [DaVinci Resolve MCP server](https://github.com/samuelgursky/davinci-resolve-mcp): Lets an agent control DaVinci Resolve through its scripting API: projects, media pool, timelines, markers, color grading, Fusion, audio and render jobs, plus media analysis. Made by samuelgursky. Works with any engine.
 - [ElevenLabs hosted MCP server](https://elevenlabs.io/docs/agents-platform/operate/hosted-mcp): ElevenLabs' own hosted server. Creates, updates, duplicates and deletes voice agents, reads their conversations, runs tests, manages branches and deployments, and generates speech audio from text. Made by ElevenLabs. Works with any engine.

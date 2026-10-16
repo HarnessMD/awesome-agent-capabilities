@@ -1,0 +1,48 @@
+name: Sign the list
+
+# Every push to main: build the list from data/ with the Munder Difflin app's
+# own check, write README.md and the pages in listed/, sign the list and
+# commit catalog-update.json. The signing key is a secret of the
+# catalog-signing environment, which only main may use; pull requests never
+# reach it. The commit this job makes does not start it again.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sign-the-list
+  cancel-in-progress: false
+
+jobs:
+  sign:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment: catalog-signing
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: 22
+      - name: Build, check and sign
+        env:
+          CATALOG_SIGNING_KEY: ${{ secrets.CATALOG_SIGNING_KEY }}
+        run: node scripts/publish.mjs
+      - name: Commit what changed
+        run: |
+          git add -A README.md listed catalog-update.json
+          if git diff --cached --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git fetch --quiet origin main
+          if [ "$(git rev-parse origin/main)" != "$GITHUB_SHA" ]; then
+            echo "main moved on while this ran. The run for the newer push signs the list."
+            exit 0
+          fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit --quiet -m "Sign the list"
+          git push --quiet origin HEAD:main

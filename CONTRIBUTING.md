@@ -1,6 +1,6 @@
 # Adding or changing an item
 
-Every item lives in a file in [data](data). README.md and `catalog-update.json` are made from those files when a change is merged, so change the data, never those two.
+Every item lives in a file in [data](data). README.md, the pages in [listed](listed) and `catalog-update.json` are made from those files when a change is merged, so change the data, never those.
 
 ## What belongs here
 
@@ -92,9 +92,13 @@ Install steps are reviewed by a maintainer before they are merged. The app check
 - `usage`: Usage and cost
 - `utilities`: Time and utilities
 
-## The check
+## The checks
 
-Run `node scripts/check.mjs` (Node 20 or later, nothing to install). It runs on every pull request and says which file, which item and what is wrong. Never put a key, a token or a password in a file here.
+Run `node scripts/check.mjs` and `node scripts/publish.mjs --check` (Node 20 or later, nothing to install). Both run on every pull request. The first reads every file against the schema and says which file, which item and what is wrong. The second builds the whole list with the Munder Difflin app's own check, the one the list is signed after, and refuses an item that check would leave out. Never put a key, a token or a password in a file here.
+
+## After a merge
+
+A merge into `main` is checked and signed automatically. The publish workflow builds the list from `data/` with the same check, writes README.md and the pages in `listed/`, signs the list and commits `catalog-update.json`. The signing key is held by GitHub for this repository and is used only for `main`; nobody signs by hand. The app takes the new list within an hour, or when its Capabilities screen opens.
 
 ## License
 

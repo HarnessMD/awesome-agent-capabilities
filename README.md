@@ -6,8 +6,8 @@ This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.
 
 ## How a change reaches the app
 
-1. Each item is a row in one of the files in [data](data). A pull request changes them, and a check runs on it (`node scripts/check.mjs`).
-2. When a change is merged into `main`, the whole list goes through the app's own check and is signed. The signed list is `catalog-update.json` at the top of this repository.
+1. Each item is a row in one of the files in [data](data). A pull request changes them, and two checks run on it: `node scripts/check.mjs` reads every file against the schema, and `node scripts/publish.mjs --check` builds the whole list with the app's own check.
+2. A merge into `main` is checked and signed automatically. A workflow builds the list from [data](data), runs the app's own check on every item, writes this README and the pages in [listed](listed), signs the list and commits it as `catalog-update.json` at the top of this repository. Nobody signs by hand.
 3. Munder Difflin reads that file when its Capabilities screen opens and once an hour. It uses the list only when the signature is ours, every item passes the check, and the list is newer than the one it holds.
 
 ## Reviewed and listed
@@ -1129,7 +1129,7 @@ This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). This file and `catalog-update.json` are made from the data files: do not edit them by hand.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). This file, the pages in [listed](listed) and `catalog-update.json` are made from the data files on every merge into `main`: do not edit them by hand.
 
 ## License
 

@@ -834,6 +834,58 @@
    "also": []
   },
   {
+   "id": "animeblip-mcp",
+   "name": "Animeblip MCP server",
+   "kind": "mcp-server",
+   "purposes": [
+    "media",
+    "marketing"
+   ],
+   "maker": "Animeblip (Emina Labs LLP)",
+   "tier": "vendor",
+   "source": "https://animeblip.com/docs",
+   "what": "Animeblip's own hosted server. Turns one brief into a finished video: script, consistent characters, storyboard, voices, music and the final cut, for ads, product promos, micro dramas, anime series and music videos. Each image and video uses Animeblip credits.",
+   "wave": 2,
+   "worksWith": [
+    "claude",
+    "codex",
+    "cursor",
+    "gemini",
+    "opencode",
+    "copilot",
+    "antigravity"
+   ],
+   "signIn": {
+    "kind": "key",
+    "secretNames": [
+     "ANIMEBLIP_API_KEY"
+    ]
+   },
+   "can": {
+    "reads": true,
+    "writes": true,
+    "sends": false,
+    "spends": true,
+    "deletes": false
+   },
+   "ships": "hosted-server",
+   "checkedAt": "2026-10-16",
+   "riskNote": "The key has full access to the Animeblip account and spends its credits, and it is part of the server address, so keep that address private. The docs do not list the tools by name.",
+   "install": {
+    "door": "none",
+    "manual": [
+     "Create a key: open https://studio.animeblip.com, go to the MCP page, create an API key and copy the connector address it gives you.",
+     "Claude Code: claude mcp add --transport http animeblip \"<the connector address>\"",
+     "Claude app: Settings, then Connectors, add a custom connector with the same address.",
+     "Any other agent that takes a remote MCP server: add a server named animeblip with the same address."
+    ]
+   },
+   "also": [
+    "https://animeblip.com",
+    "https://studio.animeblip.com"
+   ]
+  },
+  {
    "id": "anyquery",
    "name": "Anyquery",
    "kind": "mcp-server",

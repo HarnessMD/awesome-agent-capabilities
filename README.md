@@ -356,6 +356,7 @@ This list is what the Capabilities screen of [Munder Difflin](https://harnessmd.
 - [Google Calendar MCP server](https://developers.google.com/workspace/guides/configure-mcp-servers): Google's hosted Calendar server: lists calendars and events, creates, updates and deletes events, answers invitations and suggests meeting times. Nine tools. Part of the Google Workspace Developer Preview Program. Made by Google. Works with all engines.
 - [Google Calendar MCP Server](https://github.com/nspady/google-calendar-mcp): Lets an agent work with Google Calendar across one or more accounts: list and search events, check free and busy times, create, update and delete events, and respond to invitations. Made by nspady (Nate Spady). Works with any engine.
 - [Granola MCP](https://docs.granola.ai/help-center/sharing/integrations/mcp): Granola's own hosted server. Lists and searches your meeting notes, folders, attachments and transcripts. One tool switches the active workspace and one signs the agent out. Made by Granola. Works with all engines.
+- **[OneMira MCP](https://github.com/onemira-space/onemira-mcp)** - Subscription-free AI voice recorder ([OneMira C1](https://onemira.com/products/c1)) and MCP server that streams speaker-attributed transcripts, AI summaries, and Markdown memory to AI agents.
 
 ### Files and storage
 
